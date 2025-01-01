@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --background-color: #fff;
+    --text-color: #fff;
+    --progress-bar-color: #37352F;
+    --progress-container-bg: #F0F0EF;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #191919;
+        --text-color: #191919;
+        --progress-bar-color: #D4D4D4;
+        --progress-container-bg: #2C2C2C;
+    }
+}
+
+body {
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-optical-sizing: auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.progress-widget{
+    position: relative;
+    width: 100%;
+
+}
+
+.progress-container {
+    margin: 0px 20px;
+    background-color: var(--progress-container-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--progress-bar-color);
+}
+
+.progress-bar {
+    height: 40px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    background-color: var(--progress-bar-color);
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    position: absolute;
+    width: fit-content;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 4px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight:400;
+    color: var(--text-color);
+    background-color: var(--progress-bar-color);
+}
