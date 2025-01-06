@@ -5,11 +5,13 @@ const progressText = document.getElementById("progress-text");
 
 function updateProgressBar() {
   const today = new Date();
+
   const timeOneDay = 1000 * 60 * 60 * 24;
 
-  const daysPassed = Math.ceil((today - startDate) / timeOneDay);
+  const daysPassed = Math.ceil((today - startDate) / timeOneDay)-1;
+
   const totalDays = Math.ceil((endDate - startDate) / timeOneDay);
-  
+
   const progressPercentage = Math.min((daysPassed / totalDays) * 100, 100);
 
   progressBar.style.width = progressPercentage + "%";
