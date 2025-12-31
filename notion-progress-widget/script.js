@@ -1,5 +1,5 @@
-const startDate = new Date("2024-12-31");
-const endDate = new Date("2025-12-31");
+const startDate = new Date("2025-12-31");
+const endDate = new Date("2026-12-31");
 const progressBar = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
 
