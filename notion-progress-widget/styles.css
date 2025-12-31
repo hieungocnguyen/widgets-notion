@@ -35,7 +35,7 @@ body {
 }
 
 .progress-container {
-    margin: 0px 20px;
+    /* margin: 0px 20px; */
     background-color: var(--progress-container-bg);
     border-radius: 8px;
     overflow: hidden;
